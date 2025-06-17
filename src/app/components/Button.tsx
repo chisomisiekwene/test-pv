@@ -72,13 +72,12 @@ export const SecondaryButton = ({
   loader,
   ...rest
 }: ButtonProps) => {
-  const style = { height: "24px", width: "24px" };
   return (
     <button
       type={type}
       className={`${
         (beforeIcon || afterIcon) && "flex gap-2 !items-center !justify-center"
-      }  text-white bg-black hover:scale-100 transition-all duration-200 hover:text-white whitespace-nowrap rounded-xl lg:px-6 lg:py-3 px-6 p-3 lg:text-base font-bold hover:border hover:border-white cursor-pointer hover:bg-transparent ${className}`}
+      }  text-white bg-black hover:scale-100 transition-all duration-200 hover:text-black hover:border hover:border-black whitespace-nowrap rounded-xl lg:px-6 lg:py-3 px-6 p-3 lg:text-base font-bold cursor-pointer hover:bg-transparent ${className}`}
       onClick={onClick}
       disabled={disabled ? true : false}
       {...rest}
@@ -161,19 +160,62 @@ export const OtherButton = ({
     <button
       type={type}
       className={`${(loader || beforeIcon || afterIcon) && "flex  items-center"}
-       border-[1px] rounded-[4px] focus:outline-none ${className}`}
+       border-[2px] border-black hover:scale-100 rounded-[60px] py-2 px-8 cursor-pointer focus:outline-none ${className}`}
       onClick={onClick}
       disabled={disabled ? true : false}
       {...rest}
     >
       {beforeIcon && (
-        <span className="mr-2">
+        <span className="mr-3">
           <Image src={beforeIcon} alt="" />
         </span>
       )}
       {title}
       {afterIcon && (
-        <span className="ml-2">
+        <span className="ml-3">
+          <Image src={afterIcon} alt="" />
+        </span>
+      )}
+      {loader && (
+        <span className="ml-2 animate-spin">
+          <div className="w-4 h-4 relative">
+            <Image src="images/button-loading-icon" alt="" fill />
+          </div>
+          {/* <Loader /> */}
+        </span>
+      )}
+    </button>
+  );
+};
+
+export const ActiveButton = ({
+  title,
+  onClick,
+  className,
+  type,
+  disabled,
+  loader,
+  afterIcon,
+  beforeIcon,
+  ...rest
+}: ButtonProps) => {
+  return (
+    <button
+      type={type}
+      className={`${(loader || beforeIcon || afterIcon) && "flex  items-center"}
+       text-white bg-black hover:scale-100 rounded-[60px] py-2 px-8 cursor-pointer focus:outline-none ${className}`}
+      onClick={onClick}
+      disabled={disabled ? true : false}
+      {...rest}
+    >
+      {beforeIcon && (
+        <span className="mr-3">
+          <Image src={beforeIcon} alt="" />
+        </span>
+      )}
+      {title}
+      {afterIcon && (
+        <span className="ml-3">
           <Image src={afterIcon} alt="" />
         </span>
       )}

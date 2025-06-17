@@ -116,7 +116,7 @@ export function PayBills() {
         backgroundImage: `url(${man.src})`,
       }}
     >
-      <div className="container mx-auto py-16 lg:py-32">
+      <div className="container px-8 mx-auto py-16 lg:py-32">
         <div className="grid lg:grid-cols-2 items-center gap-4 lg:gap-20">
           {/* Left Content */}
           <article className="flex flex-col gap-12">
@@ -135,7 +135,7 @@ export function PayBills() {
               <p className="text-white text-base font-medium">
                 Get Revve on your phone
               </p>
-              <PrimaryButton title="Coming soon" />
+              <PrimaryButton title="Coming soon" className="w-fit" />
             </div>
           </article>
 

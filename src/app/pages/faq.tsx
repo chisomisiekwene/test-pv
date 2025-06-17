@@ -3,13 +3,17 @@
 import { useState, useRef } from "react";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
+import { Dialog, DialogTrigger, DialogContent, DialogClose } from "@/components/ui/dialog";
+
 import plus from "../assets/plus.svg";
 import mouse from "../assets/Mouse.svg";
-import { PrimaryButton } from "../components/Button";
 import { faqItems } from "../components/list/faq";
+import Download from "./downloadmodal";
+import { PrimaryButton } from "../components/Button";
 
 export default function Faq() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+  const [openDialog, setOpenDialog] = useState(false);
 
   const introRef = useRef(null);
   const listRef = useRef(null);
@@ -21,9 +25,9 @@ export default function Faq() {
   };
 
   return (
-    <div className="min-h-screen bg-[#4F0072] text-white px-4 sm:px-6 lg:px-20 py-12 lg:py-30">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16">
-        {/* Left side: Intro */}
+    <div className="min-h-screen bg-[#4F0072] text-white px-8 lg:px-20 py-12 lg:py-30">
+      <div className="max-w-8xl mx-auto grid lg:grid-cols-2 gap-16">
+        {/* Left: Intro Section */}
         <motion.div
           ref={introRef}
           initial={{ opacity: 0, y: 30 }}
@@ -37,7 +41,20 @@ export default function Faq() {
           </p>
           <div className="space-y-6">
             <p className="text-purple-200 text-base">Get Revve on your phone</p>
-            <PrimaryButton className="w-full lg:max-w-[40%]" title="Download the app" />
+
+            {/* shadcn Dialog integration */}
+            <Dialog open={openDialog} onOpenChange={setOpenDialog}>
+              <DialogTrigger asChild>
+                <PrimaryButton
+                title="Download the app"
+                />
+              </DialogTrigger>
+              <DialogContent className="bg-white max-w-md rounded-xl p-6">
+                <Download />
+                
+              </DialogContent>
+            </Dialog>
+
             <div className="flex items-center space-x-2 mt-6">
               <Image src={mouse} alt="Mouse Icon" className="w-6 h-6" />
               <span className="text-[#ffffff32] text-sm sm:text-base">
@@ -47,7 +64,7 @@ export default function Faq() {
           </div>
         </motion.div>
 
-        {/* Right side: FAQ list */}
+        {/* Right: FAQ List */}
         <motion.div
           ref={listRef}
           initial={{ opacity: 0, y: 30 }}
@@ -67,32 +84,22 @@ export default function Faq() {
                 onClick={() => toggleFAQ(index)}
                 className="flex items-center justify-between cursor-pointer w-full text-left hover:text-purple-200 transition-colors duration-300"
               >
-                <h2 className="text-lg sm:text-xl lg:text-2xl font-medium pr-4">
-                  {item.question}
-                </h2>
+                <h2 className="text-lg sm:text-xl lg:text-2xl font-medium pr-4">{item.question}</h2>
                 <div className="w-8 h-8 sm:w-[50px] sm:h-[50px] transition-transform duration-300">
                   <Image
                     src={plus}
                     alt="Toggle Icon"
-                    className={`w-full h-full object-contain transform ${
-                      openFAQ === index ? "rotate-45" : ""
-                    }`}
+                    className={`w-full h-full object-contain transform ${openFAQ === index ? "rotate-45" : ""}`}
                   />
                 </div>
               </button>
               <motion.div
                 initial={false}
-                animate={
-                  openFAQ === index
-                    ? { height: "auto", opacity: 1 }
-                    : { height: 0, opacity: 0 }
-                }
+                animate={openFAQ === index ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }}
                 transition={{ duration: 0.4 }}
                 className="overflow-hidden"
               >
-                <p className="text-base sm:text-lg leading-relaxed pr-4 mt-3 text-purple-100">
-                  {item.answer}
-                </p>
+                <p className="text-base sm:text-lg leading-relaxed pr-4 mt-3 text-purple-100">{item.answer}</p>
               </motion.div>
             </motion.div>
           ))}

@@ -59,14 +59,15 @@ export default function Hero() {
         },
       )
 
-      // Main entrance timeline (triggers immediately on page load/refresh)
-      const entranceTl = gsap.timeline() // Removed delay for immediate start
+      // Main entrance timeline (triggers immediately - no delay)
+      const entranceTl = gsap.timeline()
 
+      // Start all animations immediately with faster durations
       entranceTl
         .to(scrollIndicatorRef.current, {
           opacity: 1,
           y: 0,
-          duration: 0.8,
+          duration: 0.4, // Faster
           ease: "power2.out",
         })
         .to(
@@ -74,53 +75,53 @@ export default function Hero() {
           {
             opacity: 1,
             y: 0,
-            duration: 1,
+            duration: 0.5, // Faster
             ease: "power2.out",
           },
-          "-=0.4",
+          0, // Start at the same time
         )
         .to(
           headingRef.current,
           {
             opacity: 1,
             y: 0,
-            duration: 0.8,
+            duration: 0.4, // Faster
             ease: "power2.out",
           },
-          "-=0.6",
+          0.1, // Very small delay
         )
         .to(
           [leftBoxRef.current, rightBoxRef.current],
           {
             opacity: 1,
             y: 0,
-            duration: 0.8,
+            duration: 0.4, // Faster
             ease: "power2.out",
-            stagger: 0.2,
+            stagger: 0.1, // Smaller stagger
           },
-          "-=0.4",
+          0.2, // Small delay
         )
         .to(
           [eatingImageRef.current, shoppingImageRef.current],
           {
             opacity: 1,
             y: 0,
-            duration: 0.8,
+            duration: 0.4, // Faster
             ease: "power2.out",
-            stagger: 0.15,
+            stagger: 0.05, // Smaller stagger
           },
-          "-=0.5",
+          0.3, // Small delay
         )
         .to(
           [currencyRef.current, sendRef.current],
           {
             opacity: 1,
             y: 0,
-            duration: 0.8,
+            duration: 0.4, // Faster
             ease: "power2.out",
-            stagger: 0.1,
+            stagger: 0.05, // Smaller stagger
           },
-          "-=0.4",
+          0.4, // Small delay
         )
 
       // Parallax effect for floating elements on scroll

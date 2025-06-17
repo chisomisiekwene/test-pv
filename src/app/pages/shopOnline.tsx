@@ -8,9 +8,17 @@ import joggers from "../assets/joggers.svg";
 import shoe from "../assets/shoe.svg";
 import Image from "next/image";
 import { SecondaryButton } from "../components/Button";
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import Download from "./downloadmodal";
 
 export default function ShopOnline() {
   const [isVisible, setIsVisible] = useState(false);
+  const [openDialog, setOpenDialog] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
@@ -54,12 +62,16 @@ export default function ShopOnline() {
                   home.
                 </p>
               </motion.div>
-             < div className="space-y-4">
-                          <p className="text-back text-base font-medium">
-                            Get Revve on your phone
-                          </p>
-                          <SecondaryButton title="Download the app" />
-                        </div>
+
+              <Dialog open={openDialog} onOpenChange={setOpenDialog}>
+                <DialogTrigger asChild>
+                  <SecondaryButton title="Download the app" className="w-fit"/>
+                </DialogTrigger>
+                <DialogContent className="bg-white max-w-md rounded-xl p-6">
+                  <Download />
+                  
+                </DialogContent>
+              </Dialog>
             </motion.div>
           </section>
 
@@ -102,13 +114,11 @@ export default function ShopOnline() {
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
-             
-               <div className="absolute bottom-0 left-40 w-[120px]">
-                  <Image src={joggers} alt="Joggers" className="w-full"/>
+                <div className="absolute bottom-0 left-40 w-[120px]">
+                  <Image src={joggers} alt="Joggers" className="w-full" />
                 </div>
 
-                        
-                  <div className="absolute left-80 w-[256px]">
+                <div className="absolute left-80 w-[256px]">
                   <Image src={shoe} alt="shoe" className="w-full" />
                 </div>
 

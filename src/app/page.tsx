@@ -30,7 +30,7 @@ export default function Home() {
   }, { scope: main });
 
   return (
-    <div id="smooth-wrapper" ref={main} className="min-h-screen overflow-hidden">
+    <div id="smooth-wrapper" ref={main} className="min-h-screen overflow-hidde">
       <div id="smooth-content">
         <section id="hero"><Hero /></section>
         <section id="wallets"><MultiCurrencyWallets /></section>
