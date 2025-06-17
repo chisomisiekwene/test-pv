@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { Dialog, DialogTrigger, DialogContent, DialogClose } from "@/components/ui/dialog";
 
-import plus from "../assets/plus.svg";
+import plus from "../assets/plus.png";
 import mouse from "../assets/Mouse.svg";
 import { faqItems } from "../components/list/faq";
 import Download from "./downloadmodal";
@@ -85,7 +85,7 @@ export default function Faq() {
                 className="flex items-center justify-between cursor-pointer w-full text-left hover:text-purple-200 transition-colors duration-300"
               >
                 <h2 className="text-lg sm:text-xl lg:text-2xl font-medium pr-4">{item.question}</h2>
-                <div className="w-8 h-8 sm:w-[50px] sm:h-[50px] transition-transform duration-300">
+                <div className="w-8 h-8 sm:w-[25px] sm:h-[25px] transition-transform duration-300">
                   <Image
                     src={plus}
                     alt="Toggle Icon"

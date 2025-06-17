@@ -2,16 +2,16 @@ import Image from "next/image";
 import CustomInputField from "../components/input";
 import CustomTextArea from "../components/textarea";
 import { PrimaryButton } from "../components/Button";
-import call from "../assets/call.svg";
-import mail from "../assets/mail.svg";
-import chat from "../assets/chat.svg";
-import email from "../assets/email.svg";
-import phone from "../assets/phone.svg";
-import map from "../assets/map.svg";
-import fb from "../assets/fb.svg";
-import linkedin from "../assets/linkedin.svg";
-import twitter from "../assets/twitter.svg";
-import ig from "../assets/ig.svg";
+import call from "../assets/call.png";
+import mail from "../assets/mail.png";
+import chat from "../assets/chat.png";
+import email from "../assets/email.png";
+import phone from "../assets/phone.png";
+import map from "../assets/map.png";
+import fb from "../assets/fb.png";
+import linkedin from "../assets/linkedin.png";
+import twitter from "../assets/twitter.png";
+import ig from "../assets/ig.png";
 
 export function Contact() {
   const socialLinks = [
@@ -23,7 +23,7 @@ export function Contact() {
   return (
     <div className="min-h-screen bg-[#4F0072] relative overflow-hidden">
       {/* Decorative Elements */}
-      <div className="hidden md:block absolute bottom-36 left-0 lg:w-[297px]">
+      <div className="hidden md:block absolute bottom-50 left-0 lg:w-[297px]">
         <Image
           src={mail}
           alt="Decorative Element"

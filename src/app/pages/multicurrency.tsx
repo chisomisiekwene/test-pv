@@ -2,13 +2,13 @@
 
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import cad from "../assets/cad.svg";
-import cfa from "../assets/cfa.svg";
-import nga from "../assets/nga.svg";
-import usd from "../assets/usd.svg";
+import cad from "../assets/cad (1).png";
+import cfa from "../assets/cfa (1).png";
+import nga from "../assets/ngn (1).png";
+import usd from "../assets/usd (1).png";
 import Image from "next/image";
-import iphone from "../assets/iphone.svg";
-import woman from "../assets/woman.svg";
+import iphone from "../assets/iPhone (1).png";
+import woman from "../assets/woman.png";
 
 export default function MultiCurrencyWallets() {
   const [isVisible, setIsVisible] = useState(false);
@@ -87,7 +87,7 @@ export default function MultiCurrencyWallets() {
                     <motion.li
                       key={index}
                       role="listitem"
-                      className="w-[250px] md:w-[328px]"
+                      className="w-[250px] md:w-[295px]"
                       initial={{
                         y: -50,
                         opacity: 0,
@@ -135,7 +135,7 @@ export default function MultiCurrencyWallets() {
                 </ul>
               </div>
               {/* Phone Frame */}
-              <div className="md:[432px] md:h-[708px]">
+              <div className="md:[550px] md:h-[708px]">
                 <Image
                   src={iphone}
                   alt="Mobile phone frame"

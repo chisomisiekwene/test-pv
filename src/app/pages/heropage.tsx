@@ -4,13 +4,13 @@ import { useEffect, useState, useRef } from "react"
 import Image from "next/image"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import Eating from "../assets/Eating.svg"
-import currency1 from "../assets/Currency.svg"
-import send1 from "../assets/Paper Plane.svg"
-import shopping from "../assets/Shopping.svg"
-import centralImage from "../assets/Mask.svg"
-import currency2 from "../assets/currency2.svg"
-import send2 from "../assets/send2.svg"
+import Eating from "../assets/Eating.png"
+import currency1 from "../assets/Currency.png"
+import send1 from "../assets/send.png"
+import shopping from "../assets/Shopping.png"
+import centralImage from "../assets/Mask.png"
+import currency2 from "../assets/currency2.png"
+import send2 from "../assets/send2.png"
 import scroll from "../assets/scroll.svg"
 import mouse from "../assets/pad.svg"
 
@@ -290,9 +290,9 @@ export default function Hero() {
         {/* Bottom left shopping icon */}
         <div
           ref={shoppingImageRef}
-          className="absolute top-[250px] md:top-[436px] left-0 w-[70px] h-[88px] md:w-[191px] md:h-[280px]"
+          className="absolute top-[250px] md:top-[480px] left-0 w-[70px] h-[88px] md:w-[191px] md:h-[280px]"
         >
-          <Image src={shopping || "/placeholder.svg"} alt="Person with shopping bag" className="h-full w-full" />
+          <Image src={shopping || "/placeholder.svg"} alt="Person with shopping bag" className="h-full w-fit  object-contain " />
         </div>
 
         {/* Right teal box */}

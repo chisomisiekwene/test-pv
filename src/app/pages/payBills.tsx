@@ -1,79 +1,3 @@
-// import man from "../assets/man.svg";
-// import Image from "next/image";
-// import calendar from "../assets/Calendar.svg";
-// import { PrimaryButton } from "../components/Button";
-
-// export function PayBills() {
- 
-//   return (
-//     <section
-//       className="relative z-10 lg:px-20 py-8 lg:py-60 bg-cover bg-center bg-no-repeat"
-//       style={{
-//         backgroundImage: `url(${man.src})`,
-//       }}
-//     >
-//       <div className="grid lg:grid-cols-2 items-center gap-8 lg:gap-16 w-full">
-//         {/* Left Content */}
-//         <article className="flex flex-col gap-20">
-//           <header className="flex flex-col gap-20">
-//             <h1 className="text-5xl lg:text-[52px] font-bold text-white tracking-tight">
-//               Pay Bills
-//             </h1>
-//             <p className="text-base font-medium max-w-80 leading-relaxed text-white">
-//               Say goodbye to long queues and endless processes—our platform offers a seamless solution for paying bills instantly without any hiccups.
-//             </p>
-//           </header>
-
-//           <div className="space-y-4">
-//             <p className="text-white text-base font-medium">
-//               Get Revve on your phone
-//             </p>
-//             <PrimaryButton title="Coming soon" />
-//           </div>
-//         </article>
-
-//         <div className="mx-60 w-[340px] h-[588px]">
-//           <Image
-//             src={calendar}
-//             alt="Calendar"
-//             className="w-full h-full object-cover"
-//           />
-//         </div>
-
-//         {/* Right Content
-//         <figure className="relative">
-//           <Image
-//             src="/hero-image.jpeg"
-//             alt="Person sitting on couch with colorful pillows, holding phone"
-//             width={600}
-//             height={400}
-//             className="w-full h-auto rounded-lg"
-//             priority
-//           />
-
-//           {/* Calendar Overlay */}
-//         {/* <figcaption className="absolute top-4 right-4 lg:top-8 lg:right-8 p-4 bg-white/95 backdrop-blur-sm shadow-lg">
-//             <div className="grid grid-cols-7 gap-1 text-xs">
-//               {calendarData.map((day) => (
-//                 <div
-//                   key={day.date}
-//                   className="w-8 h-8 flex items-center justify-center rounded relative"
-//                 >
-//                   <span className="text-gray-700 font-medium">{day.date}</span>
-//                   {day.hasEvent && (
-//                     <div
-//                       className={`absolute bottom-0 right-0 w-2 h-2 rounded-full ${day.color}`}
-//                     />
-//                   )}
-//                 </div>
-//               ))}
-//             </div>
-//           </figcaption>
-//         </figure> */}
-//       </div>
-//     </section>
-//   );
-// }
 
 
 
@@ -81,8 +5,8 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import man from "../assets/man.svg";
-import calendar from "../assets/Calendar.svg";
+import man from "../assets/man.png";
+import calendar from "../assets/Calendar.png";
 import { PrimaryButton } from "../components/Button";
 
 export function PayBills() {

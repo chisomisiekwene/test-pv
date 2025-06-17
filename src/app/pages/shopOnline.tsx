@@ -2,15 +2,14 @@
 
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import central from "../assets/central.svg";
-import perfume from "../assets/perfume.svg";
-import joggers from "../assets/joggers.svg";
-import shoe from "../assets/shoe.svg";
+import central from "../assets/central.png";
+import perfume from "../assets/perfume.png";
+import joggers from "../assets/joggers.png";
+import shoe from "../assets/shoe.png";
 import Image from "next/image";
 import { SecondaryButton } from "../components/Button";
 import {
   Dialog,
-  DialogClose,
   DialogContent,
   DialogTrigger,
 } from "@/components/ui/dialog";
