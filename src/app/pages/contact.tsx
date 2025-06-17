@@ -111,7 +111,7 @@ export function Contact() {
 
         {/* Footer */}
         <footer className="mt-5 lg:mt-130 p-8 lg:px-40">
-          <div className="flex flex-col md:flex-row gap-6 lg:justify-between lg:items-center items-start space-y-6 md:space-y-0">
+          <div className="flex flex-col lg:flex-row gap-6 lg:justify-between lg:items-center items-start space-y-6 md:space-y-4">
             <div className="flex gap-4 items-center lg:space-x-6">
               {socialLinks.map((link) => (
                 <a
@@ -126,7 +126,7 @@ export function Contact() {
               ))}
             </div>
 
-              <div className="flex flex-col lg:flex-row items-start lg:items-center text-white gap-4 space-x-10 font-medium text-base">
+              <div className="flex flex-col md:flex-row items-start md:items-center text-white gap-4 space-x-10 font-medium text-base">
                 <a href="#" className="cursor-pointer hover:text-white transition-colors">
                   About Us
                 </a>

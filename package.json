@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "@next/font": "^14.2.15",
     "framer-motion": "^12.18.1",
     "lucide-react": "^0.515.0",

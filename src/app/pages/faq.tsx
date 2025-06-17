@@ -37,7 +37,7 @@ export default function Faq() {
           </p>
           <div className="space-y-6">
             <p className="text-purple-200 text-base">Get Revve on your phone</p>
-            <PrimaryButton className="w-full lg:max-w-[70%]" title="Download the app" />
+            <PrimaryButton className="w-full lg:max-w-[40%]" title="Download the app" />
             <div className="flex items-center space-x-2 mt-6">
               <Image src={mouse} alt="Mouse Icon" className="w-6 h-6" />
               <span className="text-[#ffffff32] text-sm sm:text-base">
@@ -65,7 +65,7 @@ export default function Faq() {
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="flex items-center justify-between w-full text-left hover:text-purple-200 transition-colors duration-300"
+                className="flex items-center justify-between cursor-pointer w-full text-left hover:text-purple-200 transition-colors duration-300"
               >
                 <h2 className="text-lg sm:text-xl lg:text-2xl font-medium pr-4">
                   {item.question}

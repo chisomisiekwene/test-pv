@@ -17,7 +17,7 @@ export default function ShopOnline() {
   }, []);
 
   return (
-    <main className=" relative bg-[#F2F2F2] py-10 lg:py-[192px]">
+    <main className=" relative bg-[#F2F2F2] md:py-20 py-10 lg:py-[192px]">
       <div className="px-8 lg:px-20 mx-auto lg:pb-[100px]">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
           {/* Left Content */}
@@ -30,7 +30,7 @@ export default function ShopOnline() {
             >
               <motion.h1
                 id="main-heading"
-                className="text-3xl lg:text-[52px] leading-tight"
+                className="text-3xl md:text-[52px] leading-tight"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
                 transition={{ duration: 0.8, delay: 0.4 }}

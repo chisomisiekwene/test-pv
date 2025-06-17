@@ -23,7 +23,7 @@ export default function MultiCurrencyWallets() {
   const phoneCards = cards.slice(2); // Last 2 cards inside phone
 
   return (
-    <section className=" relative overflow-hidden lg:pt-100 pt-10 px-8 lg:px-20 z-10 bg-white">
+    <section className=" relative overflow-hidden lg:pt-100 md:pt-20 pt-10 px-8 lg:px-20 z-10 bg-white">
       <main className="grid grid-cols-1 lg:grid-cols-3 justify-between items-center">
         <section aria-labelledby="main-heading" className="col-span-1">
           <motion.div
@@ -34,7 +34,7 @@ export default function MultiCurrencyWallets() {
           >
             <motion.h1
               id="main-heading"
-              className="text-3xl lg:text-[52px] leading-tight"
+              className="text-3xl md:text-[52px] leading-tight"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -65,7 +65,7 @@ export default function MultiCurrencyWallets() {
         </section>
         <section
           aria-labelledby="wallet-demo"
-          className="mt-56 lg:mt-0 col-span-1 flex justify-center relative"
+          className="mt-56 md:mt-60 lg:mt-0 col-span-1 flex justify-center relative"
         >
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -87,7 +87,7 @@ export default function MultiCurrencyWallets() {
                     <motion.li
                       key={index}
                       role="listitem"
-                      className="w-[250px] lg:w-[328px]"
+                      className="w-[250px] md:w-[328px]"
                       initial={{
                         y: -50,
                         opacity: 0,

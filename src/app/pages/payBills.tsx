@@ -116,7 +116,7 @@ export function PayBills() {
         backgroundImage: `url(${man.src})`,
       }}
     >
-      <div className="container mx-auto px-4 lg:px-20 py-16 lg:py-32">
+      <div className="container mx-auto py-16 lg:py-32">
         <div className="grid lg:grid-cols-2 items-center gap-4 lg:gap-20">
           {/* Left Content */}
           <article className="flex flex-col gap-12">
@@ -124,7 +124,7 @@ export function PayBills() {
               <h1 className="text-3xl md:text-4xl lg:text-[52px] font-heading font-bold text-white tracking-tight">
                 Pay Bills
               </h1>
-              <p className="text-base font-sans lg:max-w-80 max-w-xl mx-auto lg:mx-0 text-white leading-relaxed">
+              <p className="text-base font-sans lg:max-w-80 max-w-xl mx-auto md:mx-0 text-white leading-relaxed">
                 Say goodbye to long queues and endless processes—our platform
                 offers a seamless solution for paying bills instantly without
                 any hiccups.
